@@ -5,6 +5,13 @@
 	padding: 0;
 	font-family: 'Jomolhari', serif;
 }
+
+body {
+	overflow: hidden;
+	&.active {
+		overflow: visible;
+	}
+}
 .main-fon {
 	background: url("../img/main.jpeg") 50% 50%/cover no-repeat;
 	width: 100%;
@@ -23,12 +30,12 @@
 	transition: 0.8s;
 	&.active {
 		left: -3711.21px;
-    	top: -1853.43px;
+		top: -1853.43px;
 	}
 }
 .top-header-fon {
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	transform: translate(0, -1000%); 
@@ -138,7 +145,7 @@ li{
 .slide-number {
 	text-transform: uppercase;
 	font-size: 20px;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	right: 40px;
 
@@ -151,8 +158,22 @@ li{
 
 	color: #FFFFFF;
 
+	transition: 0.8s;
 }
 
+.my-cart {
+	height: 100vh;
+	display: flex;
+	gap: 30px;
+	justify-content: space-between;
+}
+.cart {
+	margin-top: 30px;
+	height: 400px;
+	padding: 20px;
+	background-color: #ccc;	
+	text-align: center;
+}
 
 
 

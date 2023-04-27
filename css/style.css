@@ -83,6 +83,13 @@ a {
   font-family: "Jomolhari", serif;
 }
 
+body {
+  overflow: hidden;
+}
+body.active {
+  overflow: visible;
+}
+
 .main-fon {
   background: url("../img/main.jpeg") 50% 50%/cover no-repeat;
   width: 100%;
@@ -110,11 +117,11 @@ a {
 
 .top-header-fon {
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: translate(0, -10000%);
-          transform: translate(0, -10000%);
+  -webkit-transform: translate(0, -1000%);
+          transform: translate(0, -1000%);
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
@@ -191,8 +198,8 @@ li {
 }
 
 .top-text {
-  -webkit-transform: translate(0, -10000%);
-          transform: translate(0, -10000%);
+  -webkit-transform: translate(0, -1000%);
+          transform: translate(0, -1000%);
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
@@ -220,8 +227,8 @@ li {
 }
 
 .scroll-text {
-  -webkit-transform: translate(0, 10000%);
-          transform: translate(0, 10000%);
+  -webkit-transform: translate(0, 1000%);
+          transform: translate(0, 1000%);
   -webkit-transition: 0.8s;
   transition: 0.8s;
   position: relative;
@@ -249,7 +256,7 @@ li {
 .slide-number {
   text-transform: uppercase;
   font-size: 20px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 40px;
   font-family: "Albra";
@@ -259,4 +266,25 @@ li {
   line-height: 147px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.my-cart {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart {
+  margin-top: 30px;
+  height: 400px;
+  padding: 20px;
+  background-color: #ccc;
+  text-align: center;
 }
